@@ -1,5 +1,7 @@
 # harmon
 
+[harmon](https://github.com/No9/harmon) updated to use [node-trumpet2](https://github.com/gofunky/node-trumpet2).
+
 A middleware component for [node-http-proxy](https://github.com/nodejitsu/node-http-proxy) using [trumpet](https://github.com/substack/node-trumpet) to parse and transform the response from the proxied server.
 
 [![build status](https://secure.travis-ci.org/No9/harmon.png)](http://travis-ci.org/No9/harmon)
@@ -28,17 +30,17 @@ In this example the HTML below is returned from the remote server and parsed:
 	</body>
 </html>
 ```
-  
-The following line is removed: 
+
+The following line is removed:
 ``` html
-<div class="b">&amp; Frames</div> 
+<div class="b">&amp; Frames</div>
 ```
-And is replaced with: 
-``` html 
+And is replaced with:
+``` html
 <div>+ Trumpet</div>
-``` 
-### Run It! 
------------ 
+```
+### Run It!
+-----------
 from your project root:
 ```
 $ cd node_modules/harmon/examples
@@ -76,7 +78,7 @@ var http = require('http'),
               target: 'http://localhost:9000'
         })
 
-        //Additional true parameter can be used to ignore js and css files. 
+        //Additional true parameter can be used to ignore js and css files.
         //app.use(require('../')([], selects, true));
 
         app.use(require('../')([], selects));
@@ -93,7 +95,7 @@ var http = require('http'),
                  res.end();
         }).listen(9000);
 ```
-or 
+or
 See how images could be rotated.
 ```
 $ cd node_modules/harmon/examples
@@ -102,7 +104,7 @@ $ node rotate.js
 
 See [trumpet](https://github.com/substack/node-trumpet) for the types of queries and functions you can use.
 
-## Contributors 
+## Contributors
 
 [fabiosantoscode](https://github.com/fabiosantoscode)
 
@@ -111,4 +113,3 @@ See [trumpet](https://github.com/substack/node-trumpet) for the types of queries
 [smazurov](https://github.com/smazurov)
 
 [sergiator](https://github.com/sergiator)
-
